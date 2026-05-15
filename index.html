@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Click Imports | Catálogo Profesional</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="img/logo.png" alt="Click Imports" class="brand-logo" />
+      <div>
+        <h1>Click Imports</h1>
+        <span>Productos importados por Gustavo Doria</span>
+      </div>
+    </a>
+
+    <ul class="menu">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="#categorias">Categorías</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#beneficios">Beneficios</a></li>
+    </ul>
+
+    <button class="cart-button" id="openCartBtn">
+      🛒 Carrito <span id="cartCount">0</span>
+    </button>
+  </nav>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div class="hero-text">
+      <span class="label">Catálogo actualizado</span>
+      <h2>Productos importados listos para pedir por WhatsApp</h2>
+      <p>Explora categorías, compara variantes por color y talla, agrega productos al carrito y envía tu pedido completo en un solo mensaje.</p>
+
+      <div class="hero-actions">
+        <a href="#productos" class="hero-btn">Ver catálogo</a>
+        <button class="hero-btn ghost" id="heroCartBtn">Ver carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios" class="benefits">
+    <article><span>🛡️</span><div><h3>Compra confiable</h3><p>Atención directa y personalizada.</p></div></article>
+    <article><span>🚚</span><div><h3>Productos importados</h3><p>Opciones modernas y seleccionadas.</p></div></article>
+    <article><span>🎨</span><div><h3>Variantes reales</h3><p>Color, talla, precio e imágenes.</p></div></article>
+    <article><span>💬</span><div><h3>Pedido por WhatsApp</h3><p>Carrito enviado automáticamente.</p></div></article>
+  </section>
+
+  <section id="categorias" class="catalog-header">
+    <div>
+      <span class="section-kicker">Explora el catálogo</span>
+      <h2>Productos destacados</h2>
+      <p>Filtra por categoría, precio o búsqueda y abre cada producto para ver sus variantes.</p>
+    </div>
+  </section>
+
+  <section class="filters-panel">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar por nombre, categoría o descripción..." />
+      <span>🔎</span>
+    </div>
+
+    <select id="sortSelect" class="sort-select">
+      <option value="default">Orden recomendado</option>
+      <option value="price-low">Precio: menor a mayor</option>
+      <option value="price-high">Precio: mayor a menor</option>
+      <option value="name">Nombre A-Z</option>
+    </select>
+
+    <div id="categoryButtons" class="category-buttons"></div>
+  </section>
+
+  <section id="productos" class="products-section">
+    <div id="productGrid" class="product-grid"></div>
+  </section>
+
+</main>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <div>
+      <h2>Tu carrito</h2>
+      <p>Pedido para enviar por WhatsApp</p>
+    </div>
+    <button id="closeCartBtn">×</button>
+  </div>
+
+  <div id="cartItems" class="cart-items"></div>
+
+  <div class="cart-summary">
+    <div class="summary-row">
+      <span>Total</span>
+      <strong id="cartTotal">$0</strong>
+    </div>
+
+    <a href="#" target="_blank" id="sendWhatsappCart" class="whatsapp-order">
+      💬 Enviar pedido por WhatsApp
+    </a>
+
+    <button id="clearCartBtn" class="clear-cart">Vaciar carrito</button>
+  </div>
+</aside>
+
+<a href="#" target="_blank" id="floatingWhatsapp" class="floating-whatsapp">💬</a>
+
+<footer class="footer">
+  <h3>Click Imports</h3>
+  <p>Catálogo digital profesional con pedido directo por WhatsApp.</p>
+  <p>© 2026 Todos los derechos reservados.</p>
+</footer>
+
+<script src="productos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

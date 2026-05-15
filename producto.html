@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Producto | Click Imports</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="img/logo.png" alt="Click Imports" class="brand-logo" />
+      <div>
+        <h1>Click Imports</h1>
+        <span>Productos importados por Gustavo Doria</span>
+      </div>
+    </a>
+
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#productos">Productos</a></li>
+      <li><a href="index.html#beneficios">Beneficios</a></li>
+    </ul>
+
+    <button class="cart-button" id="openCartBtn">
+      🛒 Carrito <span id="cartCount">0</span>
+    </button>
+  </nav>
+</header>
+
+<main class="container">
+
+  <a href="index.html#productos" class="back-link">← Volver al catálogo</a>
+
+  <section class="product-detail" id="productDetail">
+    <div class="detail-gallery">
+      <div class="main-image-card">
+        <img id="productImage" src="" alt="" />
+      </div>
+
+      <div id="thumbnailList" class="thumbnail-list"></div>
+      <div id="specsGrid" class="specs"></div>
+    </div>
+
+    <div class="detail-info">
+      <span id="productCategory" class="detail-category"></span>
+      <h1 id="productName"></h1>
+      <p id="productDescription"></p>
+
+
+      <div class="detail-box">
+        <h3>Selecciona color</h3>
+        <div id="variantButtons" class="variant-buttons"></div>
+
+        <h3 class="size-title">Selecciona talla</h3>
+        <div id="sizeButtons" class="size-buttons"></div>
+
+      </div>
+
+      <div class="detail-price-area">
+        <span>Precio seleccionado</span>
+        <strong id="productPrice"></strong>
+      </div>
+
+      <div class="quantity-box">
+        <span>Cantidad</span>
+        <div class="quantity-controls">
+          <button id="decreaseQty">−</button>
+          <strong id="quantityValue">1</strong>
+          <button id="increaseQty">+</button>
+        </div>
+      </div>
+
+      <div class="product-actions">
+        <button id="addToCartBtn" class="detail-whatsapp">🛒 Agregar al carrito</button>
+        <a id="singleWhatsappButton" class="secondary-btn" target="_blank">💬 Consultar este producto</a>
+      </div>
+
+      <div class="notice">
+        Las imágenes son referenciales. Disponibilidad sujeta a inventario.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <div>
+      <h2>Tu carrito</h2>
+      <p>Pedido para enviar por WhatsApp</p>
+    </div>
+    <button id="closeCartBtn">×</button>
+  </div>
+
+  <div id="cartItems" class="cart-items"></div>
+
+  <div class="cart-summary">
+    <div class="summary-row">
+      <span>Total</span>
+      <strong id="cartTotal">$0</strong>
+    </div>
+
+    <a href="#" target="_blank" id="sendWhatsappCart" class="whatsapp-order">
+      💬 Enviar pedido por WhatsApp
+    </a>
+
+    <button id="clearCartBtn" class="clear-cart">Vaciar carrito</button>
+  </div>
+</aside>
+
+<a href="#" target="_blank" id="floatingWhatsapp" class="floating-whatsapp">💬</a>
+
+<footer class="footer">
+  <h3>Click Imports</h3>
+  <p>Catálogo digital profesional con pedido directo por WhatsApp.</p>
+</footer>
+
+<script src="productos.js"></script>
+<script src="app.js"></script>
+<script src="producto.js"></script>
+</body>
+</html>
